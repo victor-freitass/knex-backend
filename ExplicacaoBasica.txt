@@ -1,0 +1,8 @@
+Quando uma requisição cair na index, através do consign, ele importa vários módulos passando a instancia
+do express.
+
+Esses módulos estão exportando suas devidas middlewares, e recebem o app como parâmetro.
+Assim, através da da configuração do knex + knex, lá no arquivo db é exportado 'db'.
+Express recebe esse db.
+
+E esses módulos conseguem acessar app.db e manipular o banco.
